@@ -15,7 +15,7 @@
         <uses-library android:name="com.google.android.maps" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDybiGURzvYMOklM37a0Xv2OfbRNUbF0dM"/>
+            android:value="${MAPS_API_KEY}"/>
         <activity android:name=".AddressList" />
         <activity
             android:name=".MapsActivity"
