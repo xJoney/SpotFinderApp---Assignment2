@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
+val mapsApiKey: String = project.findProperty("MAPS_API_KEY") as String? ?: ""
 
 android {
     namespace = "com.example.Assignment2"
@@ -15,8 +16,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        manifestPlaceholders["MAPS_API_KEY"] =
-            if (project.hasProperty("MAPS_API_KEY")) project.property("MAPS_API_KEY") as String else ""
+//        manifestPlaceholders["MAPS_API_KEY"] =
+//            if (project.hasProperty("MAPS_API_KEY")) project.property("MAPS_API_KEY") as String else ""
+        manifestPlaceholders["mapsApiKey"] = mapsApiKey
+
     }
 
     buildTypes {
